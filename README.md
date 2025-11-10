@@ -77,7 +77,7 @@ Built using Flask, it allows users to:
 ## 📸 Dashboards Preview
 
 - **Query 1 – Regional Insights:** Displays performance trends by region based on `regional_business_insights.sql`.  
-- **Query 2 – Weekly Operational Metrics:** Visualizes key weekly metrics for monitoring and reporting.  
+- **Query 2 – Weekly Operational Metrics:** Visualizes key weekly metrics for monitoring and reporting based on `weekly_operational_metrics.sql`. 
 
 ---
 
