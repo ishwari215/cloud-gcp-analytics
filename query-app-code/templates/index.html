@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BigQuery Web Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+      background-color: #f7f9fc;
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    select, button {
+      padding: 8px 12px;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 90%;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e0f7fa;
+    }
+  </style>
+</head>
+<body>
+  <h2>Choose a Query to Run</h2>
+  <form method="post">
+    <select name="query_name">
+      <option value="query1" {% if selected_query == 'query1' %}selected{% endif %}>Weekly Operational Metrics</option>
+      <option value="query2" {% if selected_query == 'query2' %}selected{% endif %}>Regional Business Insights</option>
+    </select>
+    <button type="submit">Run Query</button>
+  </form>
+
+  {% if results %}
+    <h3>Query Results:</h3>
+    <table>
+      <thead>
+        <tr>
+          {% for key in results[0].keys() %}
+            <th>{{ key }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in results %}
+          <tr>
+            {% for value in row.values() %}
+              <td>{{ value }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</body>
+</html>
