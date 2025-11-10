@@ -83,6 +83,4 @@ Built using Flask, it allows users to:
 
 ## 👩‍💻 Author
 
-Ishwari Niphade
-Data Scientist & Cloud Enthusiast
-https://www.linkedin.com/in/ishwari-niphade/ | https://github.com/ishwari215
+Ishwari Niphade | Data Scientist & Cloud Enthusiast | https://www.linkedin.com/in/ishwari-niphade/ | https://github.com/ishwari215
